@@ -1,35 +1,3 @@
-/*
-import { Configuration, OpenAIApi } from 'openai';
-
-const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY
-});
-
-const openai = new OpenAIApi(configuration);
-
-export default async function handler(req, res) {
-    const prompt = req.body.prompt;
-
-    if (!prompt || prompt === '') {
-        return res.status(400).json({ error: "Please send your prompt" });
-    }
-
-    //https://beta.openai.com/docs/api-reference/completions/create
-    const aiResult = await openai.createCompletion({
-        model: 'text-davinci-003',
-        prompt: `${prompt}`,
-        temperature: 0.9, // Higer values means the model will take more risks.
-        max_tokens: 120,
-        frequency_penalty: 0.5, // Number between -2.0 and 2.0.
-        presence_penalty: 0 // Number between -2.0 and 2.0.
-    });
-
-    const response = aiResult.data.choices[0].text?.trim() || 'Sorry, there was a problem';
-    res.status(200).json({ text: response });
-}
-*/
-
-// import { NextApiRequest, NextApiResponse } from "next";
 import { Configuration, OpenAIApi } from 'openai';
 
 const configuration = new Configuration({
@@ -50,7 +18,6 @@ export default async function handler(req, res) {
         ? `${conversationHistory}\n${newMessage}`
         : newMessage;
 
-    //https://beta.openai.com/docs/api-reference/completions/create
     const aiResult = await openai.createCompletion({
         model: 'text-davinci-003',
         prompt: `${formattedPrompt}`,

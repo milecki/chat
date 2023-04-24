@@ -63,14 +63,11 @@ const ChatInput = ({ onSend, disabled }) => {
   );
 
   return (
-    // <div className="bg-white border-2 p-2 rounded-lg flex justify-center">
     <div className="bg-white rounded-lg flex justify-center border-2 border-blue-700">
-      {/* //relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 */}
       <input
         value={input.value}
         onChange={input.onChange}
         className="w-full py-2 px-3 text-gray-800 rounded-lg focus:outline-none"
-        // className="w-full rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
         type="text"
         placeholder="Ask me anything"
         disabled={disabled}
@@ -183,7 +180,7 @@ export default function Home() {
                 <div>
                   <button
                     type="button"
-                    class="mt-3 stext-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                    className="mt-3 stext-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                   >
                     Experience EngiChat Today
                   </button>
